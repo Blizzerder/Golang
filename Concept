@@ -1,1 +1,29 @@
+1. 如果导入了一个包却没有使用它，则会在构建程序时引发错误，如 imported and not used: os，这正是遵循了 Go 的格言：“没有不必要的代码！”。
 
+2. Go的函数形式：
+  func functionName(parameter_list) (return_value_list) {
+     …
+  }
+其中：
+  parameter_list 的形式为 (param1 type1, param2 type2, …)
+  return_value_list 的形式为 (ret1 type1, ret2 type2, …)
+例如：
+  func Sum(a, b int) int { return a + b }
+  
+3. Go的注释：单行注释使用//    多行注释使用/*和*/
+
+4. 在Go中，一个函数可以有多个返回值，返回类型之间用逗号隔开，并用小括号()将其括起来，如：
+  func FunctionName (a typea, b typeb) (t1 type1. t2 type2)
+例如：
+  func Atoi(s string) (i int, err error)
+  （常用于判断某个函数是否执行成功或返回错误消息）
+  
+5. Go使用type关键字定义自己的类型或定义一个已经存在的类型的别名，例如：
+  type IZ int 或者
+  type (
+    IZ int
+    FZ float64
+    STR string
+  )
+  
+6.
