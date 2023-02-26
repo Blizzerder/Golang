@@ -1,3 +1,5 @@
+//一个标准的Go程序架构
+
 package main
 
 import (
