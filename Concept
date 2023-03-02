@@ -158,9 +158,16 @@ longCalculation()
 end := time.Now()
 delta := end.Sub(start)
 
-33. Go语言数组的声明格式：
-var identifier [len]type
+33. Go语言数组的声明格式：var identifier [len]type
 例如： var arr1 [5]int
 
-34.
+34. Go语言声明切片的格式：var identifier []type. 切片在未初始化之前默认为nil，长度为0
+    切片的初始化格式是：var slice1 []type = arr1[start:end]。代表slice1是由数组arr1从start索引到end-1索引之间的元素构成的子集
+    一个由数字1、2、3组成的切片可以这么生成： s := [3]int{1,2,3}[:]
+
+35. 将一个切片s扩展到上限大小： s = s[:cap(s)]
+
+36. 
+
+
 
