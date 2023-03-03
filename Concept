@@ -167,7 +167,14 @@ delta := end.Sub(start)
 
 35. 将一个切片s扩展到上限大小： s = s[:cap(s)]
 
-36. 
+36. 绝对不要用指针指向切片，因为切片本身已经是一个引用类型，所以它本身就是一个指针
+
+37. 用make函数创建切片：var slice1 []type = make([]type, len)。 可以简写为slice1 := make([]type, len)
+    如果想创建一个切片不占用整个数组而只是占用len为个数个项，只要：slice1 := make([]type, len, cap)
+    make()使用方式：func make([]T, len, cap)
+    *make方法和new方法的区别：new方法返回一个指向类型为T，值为0的地址的指针；而make方法返回一个类型为T的初始值
+
+38. 
 
 
 
