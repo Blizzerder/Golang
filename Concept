@@ -180,7 +180,12 @@ c := []byte(s)
 c[0] = 'c'
 s2 := string(c)  // s2 == "cello"
 
+39. Go中的map是引用类型，可以使用如下声明：
+var map1 map[keytype]valuetype
+例如：
+var map1 map[string]int
 
+40. 
 
 
 
