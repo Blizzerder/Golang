@@ -184,6 +184,7 @@ s2 := string(c)  // s2 == "cello"
 var map1 map[keytype]valuetype
 例如：
 var map1 map[string]int
+注意：不要使用 new()，永远用 make() 来构造 map
 
 40. 
 
