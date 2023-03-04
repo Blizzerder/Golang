@@ -174,7 +174,13 @@ delta := end.Sub(start)
     make()使用方式：func make([]T, len, cap)
     *make方法和new方法的区别：new方法返回一个指向类型为T，值为0的地址的指针；而make方法返回一个类型为T的初始值
 
-38. 
+38. 在Go中字符串是不可变的，因此不能用形如：str[i]='D' 这样的方式来修改字符串。必须先将字符串转换成字节数组，修改字节数组中的值后再修改回字符串。例如：
+s := "hello"
+c := []byte(s)
+c[0] = 'c'
+s2 := string(c)  // s2 == "cello"
+
+
 
 
 
