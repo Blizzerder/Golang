@@ -186,7 +186,15 @@ var map1 map[keytype]valuetype
 var map1 map[string]int
 注意：不要使用 new()，永远用 make() 来构造 map
 
-40. 
+40. Go的regexp包：对字符串中的正则表达式模式（pattern）进行匹配
+    简单模式的Match方法：ok, _ := regexp.Match(pat, []byte(searchIn))
+    必须先将正则模式通过 Compile() 方法返回一个 Regexp 对象。
+    例如：
+    searchIn := "John: 2578.34 William: 4567.23 Steve: 5632.18"
+    pat := "[0-9]+.[0-9]+" //正则
+    re, _ := regexp.Compile(pat)
+    str := re.ReplaceAllString(searchIn, "##.#")   //将匹配到的部分替换为"##.#"
+    fmt.Println(str)    
 
-
+41. Go中的big包提供了整数的高精度计算。大的整型数字通过big.NewInt(n)构造；大有理数通过big.NewRat(n, d)方法构造，n是分子，d是分母。
 
