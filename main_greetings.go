@@ -1,3 +1,5 @@
+//对自定义包的简单调用（greetings）
+
 package main
 
 import (
