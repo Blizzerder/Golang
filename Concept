@@ -198,3 +198,10 @@ var map1 map[string]int
 
 41. Go中的big包提供了整数的高精度计算。大的整型数字通过big.NewInt(n)构造；大有理数通过big.NewRat(n, d)方法构造，n是分子，d是分母。
 
+42. Go中struct结构体定义：
+type identifier struct {
+    field1 type1
+    field2 type2
+    ...
+}
+
